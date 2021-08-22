@@ -14,7 +14,7 @@ callCellPhoneDB <- function(SeuratObject,
     labels <- list.files(savePath_interact)
     files <- file.path(savePath_interact, labels)
     
-    cellphone.db <- readRDS(file.path(system.file(package = "stCancer"), "rds/cellphonedb.RDS"))
+    cellphone.db <- readRDS("./cellphonedb.RDS")
     
     for(i in 1 : length(files)){
         meta <- read.table(file.path(files[[i]], "meta.txt"), 
